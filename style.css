@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+:root{
+    
+    --clr-Almost-White: hsl(0, 0%, 98%);
+    --clr-Medium-Gray: hsl(0, 0%, 41%);
+    --clr-Almost-Black: hsl(0, 0%, 8%);
+
+    --ff-body: 'Epilogue', sans-serif;
+    --ff-heading: var(--ff-body);
+
+    --fw-normal:500;
+    --fw-bold:700;
+    --pd: 2rem;
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+ 
+}
+
+html, body, a  {
+  height: 100%;
+  font-family: var(--ff-body);
+  font-weight:var(--fw-normal) ;
+  color:currentColor;
+  
+}
+
+body {
+ 
+  -webkit-font-smoothing: antialiased;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  padding: 0rem;
+  font-size: 18px;
+
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+  font-size: 2.2rem;
+  font-size: 1rem;
+font-size: clamp(1rem, 0.5714285714285714rem + 6.428571428571429vw, 3.5rem);
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+ul {
+  list-style: none;
+}
+
+.center_left{
+    text-align: center;
+    margin-inline: auto;
+  }
+
+header {
+  font-size: 0.9rem;
+  position: relative;
+} 
+
+
+#mainlogo {
+  position: absolute;
+  top:0;
+  left:0;
+}  
+
+#mainlogo img {
+  padding: 1.5rem;
+  
+  display:block;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  gap: 2em;
+  color: var(--clr-Medium-Gray );
+ }
+
+.mainmenu {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-start;
+  width:auto;
+}
+
+.has_submenu {
+  padding-right: 1.2em;
+  position: relative;
+  width: max-content;
+}
+
+.arrowimg {
+  background:url(./images/icon-arrow-down.svg) no-repeat right center;
+  display: inline-block;
+  width: 1.0em;
+  height: 0.5em;
+
+  
+}
+
+.submenu {
+  font-size: 0.9rem;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 150ms ease-out;
+}
+
+.has_submenu:hover .submenu{
+  transform: scale(1,1);
+}
+
+.has_submenu:hover .arrowimg {
+  background-image: url(./images/icon-arrow-up.svg) ;
+}
+
+.submenu >* {
+  padding: 0.5em 0;
+}
+.submenu a {
+  text-decoration: none;
+}
+
+.submenu a:hover{
+  color: black;
+}
+.submenu img  {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+
+
+p {
+  color:var(--clr-Medium-Gray);
+  line-height: 1.5em;
+}
+.menu_rightside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+
+.menuitem {
+  text-decoration: none;
+}
+
+.menuitem:hover, .menubtn:hover{
+  color: black;
+  background-color: transparent;
+  border-color: black;
+}
+
+.menubtn{
+   border: 1px solid currentColor;
+   border-radius: 0.8em;
+   padding: 0.8em 1.1em;
+   cursor: pointer;
+   width: max-content;
+}
+
+.inversbtn {
+  background-color: black;
+  color: white;
+  padding: 1em 1.2em;
+}
+
+main {
+  display: grid;
+
+}
+ 
+.pictureside {
+  background: url(./images/image-hero-mobile.png) no-repeat center center;
+  aspect-ratio: 1;
+  background-size: contain;
+  grid-row: 1;
+  
+}
+
+.textside{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around ;
+  padding: 1rem 0 2rem 0;
+  gap: 1rem;
+
+}
+
+.clients{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+ }
+
+.clients img {
+  max-width: 100%;
+}
+
+#mobile_menu_btn {
+  position:absolute;
+  Z-index:10;
+  top:0;
+  right:0%;
+  margin: 1rem;
+  cursor: pointer;
+  background: url(./images/icon-menu.svg) no-repeat center center;
+  width: 2rem;
+  height:2rem;
+}
+
+.attribution {margin-top: 1em;border-top: 1px solid lightgray; padding:1em; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* --- only on mobile  menu ---*/
+
+@media(max-width: 763px){
+  .hidemobile {
+    display: none;
+  }
+
+  .clients {
+    padding: 0 1rem;
+  }
+
+ .pictureside {
+  margin-top: 1rem;
+ }
+  #mobile_menu_btn.showed_main_menu {
+    background-image: url(./images/icon-close-menu.svg) ;
+  }
+  nav {
+    background-color: white;
+    background-color: rgba(0, 0, 0, 0.527);
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 300ms ease-out /*, background-color 3000ms ease-out 3000ms*/;
+    padding-left:35%;
+    width: 100%;
+    z-index:5;
+    position: absolute;
+    
+  }
+
+ nav:after {
+  content: "";
+  position:absolute;
+  top:0;
+  left:35%;
+  height:100%;
+  width:65%;
+  background-color: white;
+  z-index: -1;
+ }
+
+  nav.showed_main_menu  {
+    height: 100vmax;
+    align-items:flex-start;
+    gap: 0;
+    transform: scale(1,1);
+    }
+  
+  .mainmenu, .menu_rightside, nav {
+    flex-direction:column;
+  }
+
+   .mainmenu {
+    padding: 8em 1rem 1rem 2rem;
+    font-size: 1.1rem;
+    gap:1.7em;
+  }
+
+  .menu_rightside {
+    width: 100%;
+    padding-top:1.5em;
+  }
+
+  header .menubtn {
+    width: 80%;
+    text-align: center;
+  }
+
+  .submenu {
+    top: 0.8em;
+    left: 0px;
+    width: max-content;
+    height: 0;
+    font-size: 1rem;
+    
+  }
+
+  .has_submenu:hover .submenu {
+    height: auto;
+    padding: 1em;
+  }
+
+} 
+
+
+/* --- on desktop --- */
+@media(min-width: 764px){
+  .hidedesktop {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    gap: 5em;
+    padding: 5em 4em
+  }
+
+  nav {
+    padding: 1.1em var(--pd) 1.1em 12em;
+  }
+  nav ul >* {
+    padding: 0.5em 0;
+  } 
+
+  .mainmenu {
+    flex-grow: 1;
+    gap: 3.5em;
+    align-items: center;
+  }
+
+  .center_left{
+    text-align: left;
+    margin-inline: unset;
+  }
+
+  h1 {
+     font-size: 5.4rem;
+  }
+
+  .col1 {
+     padding: 5em 0;
+     gap: 3em;
+  }
+  
+  .textside {
+    padding-left: var(--pd)
+  }
+  .pictureside{
+    background-image: url(./images/image-hero-desktop.png);
+    aspect-ratio: unset;
+    background-size: contain;
+    grid-row: unset;
+    margin: 0;
+  }
+
+  p {
+    width: 80%;
+  }
+    
+  .submenu {
+    position: absolute;
+    top: 1.8em;
+    left: 0px;
+    width: max-content;
+    padding:1em 2em;
+    border-radius: 0.9em;
+    box-shadow: 0px 0px 60px -3px rgba(119, 119, 119, 0.473);
+  } 
+
+    #feauters_submenu {
+      left:unset;
+      right:0;
+  }
+
+}
+

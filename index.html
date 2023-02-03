@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer ></script>
+
+  
+</head>
+
+<body>
+  <div id="mobile_menu_btn" class="hidedesktop">  </div>  
+  <header >
+     
+    <div id="mainlogo" > <img src="./images/logo.svg" alt="main logo">  </div>
+
+    <nav id="navmenu" >
+      <ul class="mainmenu ">
+        <li id="menu_feauters" class="has_submenu"> <a class="menuitem" href="#">Feauters</a> <div class="arrowimg"></div> 
+            <div id="feauters_submenu" class="submenu">
+               <div> <a href="#" class="submenu_item"> <img src="./images/icon-todo.svg" alt="todo icon"> Todo List </a></div>
+              <div> <a href="#" class="submenu_item"><img src="./images/icon-calendar.svg " alt="calendar icon"> Calendar </a> </div>
+              <div> <a href="#" class="submenu_item"> <img src="./images/icon-reminders.svg " alt="remainder icon"> Remainder </a> </div>
+              <div> <a href="#" class="submenu_item"> <img src="./images/icon-planning.svg " alt="Planing icon"> Planing</a> </div>
+            </div>
+         </li> 
+
+         <li id="menu_company" class="has_submenu"> <a class="menuitem" href="#">Company</a> <div class="arrowimg"></div> 
+            <div id="company_submenu" class="submenu">
+            <div> <a href="#" class="submenu_item"> History </a> </div>
+            <div> <a href="#" class="submenu_item"> Our Team </a> </div>
+            <div> <a href="#" class="submenu_item"> Blog </a> </div>
+            </div>
+         </li>
+
+        <li> <a class="menuitem" href="#">Careers</a></li>
+        <li> <a class="menuitem" href="#">About</a></li>
+       </ul>
+       <div class="menu_rightside">
+         <div><a  class="menuitem" href="#">Login</a> </div>
+        <div class="menubtn">Register</div>
+       </div>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="textside "> 
+      <div class="col1 center_left">
+          <h1>Make remote work</h1>
+          <p >
+            Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.
+          </p>
+          <div class="menubtn inversbtn center_left">Learn more</div>
+      </div>
+      <div class="clients">
+         <div class="databiz"> <img src="./images/client-databiz.svg" alt="databiz"> </div>
+         <div class="audiophil"> <img src="./images/client-audiophile.svg" alt="audiophile"> </div>
+         <div class="meet"> <img src="./images/client-meet.svg" alt="meet"> </div>
+         <div class="maker"> <img src="./images/client-maker.svg" alt="maker"> </div>
+      </div>
+    </div>
+    <div class="pictureside"> </div>
+
+  </main>
+  
+
+  
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Szabolcs-Zeg" target="_blank">Szabolcs</a>. <br>
+    
+  </div>
+</body>
+</html>
